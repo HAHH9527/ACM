@@ -8,6 +8,7 @@ public class Main {
 	while (sc.hasNext()) {
 	    int n = sc.nextInt();
 	    MyLinkList<Integer> list = new MyLinkList<Integer>();
+	    boolean flag = true;
 	    for (int i = 1; i <= n; i++) {
 		list.add((Integer) i);
 	    }
@@ -44,17 +45,31 @@ public class Main {
 		    list.del(yFlag);
 		    list.add(yFlag - 1, x);
 		} else if (command == 4) {
-		    MyLinkList<Integer> temp = list;
-		    list = new MyLinkList<Integer>();
-		    for (int i2 = temp.size - 1; i2 >= 0; i2--) {
-			list.add(temp.get(i2));
+		    // MyLinkList<Integer> temp = list;
+		    // list = new MyLinkList<Integer>();
+		    // for (int i2 = temp.size - 1; i2 >= 0; i2--) {
+		    // list.add(temp.get(i2));
+		    // }
+		    if (flag) {
+			flag = false;
+		    } else {
+			flag = true;
 		    }
 		}
 	    }
 	    long sum = 0;
-	    for (int i = 0; i < list.size; i += 2) {
-		sum += list.get(i);
+	    {
+		int i;
+		if (flag) {
+		    i = 0;
+		} else {
+		    i = 1;
+		}
+		for (; i < list.size; i += 2) {
+		    sum += list.get(i);
+		}
 	    }
+
 	    System.out.println(sum);
 	}
     }
