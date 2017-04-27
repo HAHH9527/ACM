@@ -1,4 +1,4 @@
-package myLinkList;
+package myLinkList2;
 
 /**
  * 

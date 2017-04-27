@@ -1,4 +1,4 @@
-package myLinkList;
+package myLinkList2;
 
 public class Test {
     public static void main(String[] args) throws Exception {

@@ -1,6 +1,7 @@
-package myLinkList;
+package myLinkList2;
 
 /**
+ * @time 2017年4月18日22点02分（将头尾节点都不储存数据
  * 
  * @author 9527Number
  *
@@ -13,20 +14,26 @@ public class MyLinkList<E> implements MyList<E> {
     public MyLinkList() {
 	head = new A();
 	end = new A();
+	head.setNext(end);
+	end.setPre(head);
     }
 
     @Override
     public void add(E obj) throws Exception {
 	A newA = new A(obj);
-	current = end;
-	if (head.getNext() == null) {
-	    head.setNext(newA);
-	    end = newA;
-	} else {
-	    current.setNext(newA);
-	    newA.setPre(current);
-	    end = newA;
-	}
+	current = end.getPre();
+	current.setNext(newA);
+	newA.setPre(current);
+	end.setPre(newA);
+	newA.setNext(end);
+	// if (head.getNext() == null) {
+	// head.setNext(newA);
+	// end = newA;
+	// } else {
+	// current.setNext(newA);
+	// newA.setPre(current);
+	// end = newA;
+	// }
 	size++;
     }
 
@@ -37,17 +44,16 @@ public class MyLinkList<E> implements MyList<E> {
      * @time 2017年4月18日11点19分（强制改变i暂时解决问题
      */
     public void add(int i, E obj) throws Exception {
-	i++;
-	if (i == size) {
+	if (i == size - 1) {
 	    add(obj);
 	} else {
 	    goTo(i);
 	    A newA = new A(obj);
-	    A temp = current.getPre();
-	    temp.setNext(newA);
-	    current.setPre(newA);
-	    newA.setNext(current);
-	    newA.setPre(temp);
+	    A temp = current.getNext();
+	    current.setNext(newA);
+	    temp.setPre(newA);
+	    newA.setNext(temp);
+	    newA.setPre(current);
 	    size++;
 	}
     }
@@ -59,17 +65,11 @@ public class MyLinkList<E> implements MyList<E> {
      * @time 2017年4月18日11点18分（删除最后一个还是有问题
      */
     public E del(int i) throws Exception {
-	if (i == size - 1) {
-	    current = end;
-	    end = current.getPre();
-	    end.setNext(current.getNext());
-	} else {
-	    goTo(i);
-	    A tempPre = current.getPre();
-	    A tempNext = current.getNext();
-	    tempPre.setNext(tempNext);
-	    tempNext.setPre(tempPre);
-	}
+	goTo(i);
+	A tempPre = current.getPre();
+	A tempNext = current.getNext();
+	tempPre.setNext(tempNext);
+	tempNext.setPre(tempPre);
 	size--;
 	return (E) current.getValue();
     }
@@ -114,6 +114,7 @@ public class MyLinkList<E> implements MyList<E> {
 	    throw new Exception("在LinkList中找不到对应Obj");
 	}
 	current = head.getNext();
+	// System.out.println("goTo()=" + current.getPre());
 	for (int count = 1; count <= i; count++) {
 	    current = current.getNext();
 	}
