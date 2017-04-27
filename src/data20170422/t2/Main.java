@@ -59,15 +59,16 @@ public class Main {
 	    }
 	    long sum = 0;
 	    {
-		int i;
 		if (flag) {
-		    i = 0;
+		    for (int i = 0; i < list.size; i += 2) {
+			sum += list.get(i);
+		    }
 		} else {
-		    i = 1;
+		    for (int i = list.size - 1; i >= 0; i -= 2) {
+			sum += list.get(i);
+		    }
 		}
-		for (; i < list.size; i += 2) {
-		    sum += list.get(i);
-		}
+
 	    }
 
 	    System.out.println(sum);
