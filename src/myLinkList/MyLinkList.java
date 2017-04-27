@@ -21,6 +21,9 @@ public class MyLinkList<E> implements MyList<E> {
     }
 
     @Override
+    /**
+     * 添加obj到链表最后
+     */
     public void add(E obj) throws Exception {
 	A newA = new A(obj);
 	current = end.getPre();
@@ -33,9 +36,7 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     /**
-     * 可能有问题的插入（在第一个元素之后插入用的是1，而不是0
-     * 
-     * @time 2017年4月18日11点19分（强制改变i暂时解决问题
+     * 在第i个元素后面插入obj
      */
     public void add(int i, E obj) throws Exception {
 	if (i == size - 1) {
@@ -54,9 +55,9 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     /**
-     * 不能被正确使用的方法
+     * 删除下标第i个的元素
      * 
-     * @time 2017年4月18日11点18分（删除最后一个还是有问题
+     * @return 被删掉的元素
      */
     public E del(int i) throws Exception {
 	goTo(i);
@@ -69,21 +70,27 @@ public class MyLinkList<E> implements MyList<E> {
     }
 
     @Override
+    /**
+     * @return 下标为i的元素的值
+     */
     public E get(int i) throws Exception {
 	goTo(i);
 	return (E) current.getValue();
     }
 
     @Override
+    /**
+     * @return 链表的长度
+     */
     public int size() {
 	return size;
     }
 
     @Override
     /**
-     * 未写的方法
+     * 搜索obj的位置
      * 
-     * @time 2017年4月18日11点20分（搜索方法已完成
+     * @return obj对应的下标
      */
     public int search(E obj) {
 	int count = 0;
@@ -106,7 +113,7 @@ public class MyLinkList<E> implements MyList<E> {
     /**
      * 将链表转换成数组
      * 
-     * @return 对象数组
+     * @return 数组
      */
     public E[] toArrary() {
 	Object[] ret = new Object[size];
@@ -118,6 +125,12 @@ public class MyLinkList<E> implements MyList<E> {
 	return (E[]) ret;
     }
 
+    /**
+     * 将current指向对应的下标
+     * 
+     * @param i
+     * @throws Exception
+     */
     private void goTo(int i) throws Exception {
 	if (i >= size || i < 0) {
 	    throw new Exception("在LinkList中找不到对应Obj");
