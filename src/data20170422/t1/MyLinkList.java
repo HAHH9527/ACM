@@ -106,7 +106,7 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     public boolean isEmpty() {
-	return head.getNext() == null;
+	return size == 0;
     }
 
     private void goTo(int i) throws Exception {
