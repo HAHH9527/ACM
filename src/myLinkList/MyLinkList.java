@@ -1,9 +1,11 @@
-package myLinkList2;
+package myLinkList;
 
 /**
  * @time 2017年4月18日22点02分（将头尾节点都不储存数据
  * 
  * @author 9527Number
+ * 
+ * @version 1.2
  *
  * @param <E>
  */
@@ -26,14 +28,6 @@ public class MyLinkList<E> implements MyList<E> {
 	newA.setPre(current);
 	end.setPre(newA);
 	newA.setNext(end);
-	// if (head.getNext() == null) {
-	// head.setNext(newA);
-	// end = newA;
-	// } else {
-	// current.setNext(newA);
-	// newA.setPre(current);
-	// end = newA;
-	// }
 	size++;
     }
 
@@ -106,7 +100,22 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     public boolean isEmpty() {
-	return head.getNext() == null;
+	return size == 0;
+    }
+
+    /**
+     * 将链表转换成数组
+     * 
+     * @return 对象数组
+     */
+    public E[] toArrary() {
+	Object[] ret = new Object[size];
+	current = head;
+	for (int i = 0; i < ret.length; i++) {
+	    current = current.getNext();
+	    ret[i] = current.getValue();
+	}
+	return (E[]) ret;
     }
 
     private void goTo(int i) throws Exception {
@@ -114,7 +123,6 @@ public class MyLinkList<E> implements MyList<E> {
 	    throw new Exception("在LinkList中找不到对应Obj");
 	}
 	current = head.getNext();
-	// System.out.println("goTo()=" + current.getPre());
 	for (int count = 1; count <= i; count++) {
 	    current = current.getNext();
 	}
