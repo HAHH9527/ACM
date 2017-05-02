@@ -1,7 +1,7 @@
 package myStack;
 
 /**
- * @version 1.1
+ * @version 1.1.1
  * 
  * @author HAHH9527
  *
@@ -22,7 +22,7 @@ public class MyStack<E> {
      */
     public void push(E obj) {
 	A<E> temp = new A<E>(obj);
-	if (this.size == -1) {
+	if (this.size == 0) {
 	    top = temp;
 	} else {
 	    temp.setHead(top);
