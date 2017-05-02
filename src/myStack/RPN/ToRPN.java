@@ -4,42 +4,41 @@ import java.util.Scanner;
 import myStack.MyStack;
 
 /**
- * @version 1.1
+ * @version 1.2
  * @author HAHH9527
- * @日志 为了解决多位数，在检测到符号后会插入一个空格
+ * @日志 解决格式问题，输入在每个符号两边带空格，存储直接使用字符串，完成计算方法
  */
 public class ToRPN {
-    private static MyStack<Character> output;// 存放逆波兰表达式的栈
-    private static MyStack<Character> temp;// 存储计算符号的栈
-    private static char[] input;// 需要处理的字符
-    private static int i;
+    private static MyStack<String> output = null;// 存放逆波兰表达式的栈
+    private static MyStack<String> temp = null;// 存储计算符号的栈
+    private static String[] input = null;// 需要处理的字符
+    private static int i = 0;
 
     public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	while (sc.hasNext()) {
-	    output = new MyStack<Character>();
-	    temp = new MyStack<Character>();
-	    String str = sc.next();
-	    input = str.toCharArray();
+	    output = new MyStack<String>();
+	    temp = new MyStack<String>();
+	    String str = sc.nextLine();
+	    input = str.split(" ");
 	    i = 0;
 	    fun();
-	    display();
+	    // display();// 显示方法，不需要使用
+	    returnAnswer();
+	    toNull();
 	}
     }
 
     private static void fun() {
 	for (; i < input.length; i++) {
-	    if (input[i] >= '0' && input[i] <= '9') {
-		fun0();
-	    } else if (input[i] == '(' || input[i] == ')') {
+	    if (input[i].equals("+") || input[i].equals("-")) {
+		fun1();
+	    } else if (input[i].equals("*") || input[i].equals("/")) {
+		fun2();
+	    } else if (input[i].equals("(") || input[i].equals(")")) {
 		fun3();
 	    } else {
-		output.push(' ');
-		if (input[i] == '+' || input[i] == '-') {
-		    fun1();
-		} else if (input[i] == '*' || input[i] == '/') {
-		    fun2();
-		}
+		fun0();
 	    }
 	}
 	while (temp.empty() == false) {
@@ -53,7 +52,7 @@ public class ToRPN {
 
     private static void fun1() {// 为+或-时的情况
 	while (temp.empty() == false) {
-	    if (temp.empty() == false && temp.peek() == '(') {// 碰到(时停止弹出
+	    if (temp.empty() == false && temp.peek().equals("(")) {// 碰到(时停止弹出
 		break;
 	    }
 	    output.push(temp.pop());
@@ -66,13 +65,10 @@ public class ToRPN {
     }
 
     private static void fun3() {// 为(或)时的情况
-	if (input[i] == '(') {
+	if (input[i].equals("(")) {
 	    temp.push(input[i]);
-	} else if (input[i] == ')') {
-	    while (true) {
-		if (temp.peek() == '(') {
-		    break;
-		}
+	} else if (input[i].equals(")")) {
+	    while (temp.peek().equals("(") == false) {
 		output.push(temp.pop());
 	    }
 	    temp.pop();
@@ -85,6 +81,39 @@ public class ToRPN {
 	    str = output.pop() + str;
 	}
 	System.out.println(str);
+    }
+
+    private static void returnAnswer() {
+	MyStack<String> temp = new MyStack<String>();
+	while (output.empty() == false) {
+	    temp.push(output.pop());
+	}
+	MyStack<String> answer = new MyStack<String>();
+	while (temp.empty() == false) {
+	    if (temp.peek().equals("+")) {
+		temp.pop();
+		String count = String.valueOf(Double.valueOf(answer.pop()) + Double.valueOf(answer.pop()));
+		answer.push(count);
+	    } else if (temp.peek().equals("-")) {
+		temp.pop();
+		String count = String.valueOf(Double.valueOf(answer.pop()) - Double.valueOf(answer.pop()));
+		answer.push(count);
+	    } else if (temp.peek().equals("*")) {
+		temp.pop();
+		String count = String.valueOf(Double.valueOf(answer.pop()) * Double.valueOf(answer.pop()));
+		answer.push(count);
+	    } else if (temp.peek().equals("/")) {
+		temp.pop();
+		String count = String.valueOf(Double.valueOf(answer.pop()) / Double.valueOf(answer.pop()));
+		answer.push(count);
+	    } else {
+		answer.push(temp.pop());
+	    }
+	}
+	System.out.println(answer.pop());
+    }
+
+    private static void toNull() {
 	output = null;
 	temp = null;
 	input = null;
