@@ -14,20 +14,24 @@ public class T4 {
 		int temp = sc.nextInt();
 		cards.add(temp);
 	    }
-	    for (int i = 0; i <= n; i++) {
-		int temp = cards.poll();
-		cards.add(temp);
-		int nowTicket = f(cards);
+	    for (int i = 0; i < n; i++) {
+		int nowTicket = f((LinkedList<Integer>) cards.clone());
 		if (nowTicket > maxTicket) {
 		    maxTicket = nowTicket;
 		}
+		int temp = cards.poll();
+		cards.add(temp);
 	    }
 	    System.out.println(maxTicket);
 	}
     }
 
     private static int f(LinkedList<Integer> cards) {
-
+	// LinkedList<Integer> temp = cards;
+	while (cards.size() != 0) {
+	    System.out.println(cards.poll());
+	}
+	System.out.println();
 	return 0;
     }
 }
