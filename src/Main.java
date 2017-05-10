@@ -1,11 +1,14 @@
-import java.util.Scanner;//µ¼°ü
+import java.math.BigInteger;
 
 public class Main {
 
     public static void main(String[] args) {
-	int x = 1024 * 1024;
-	for (int i = 0; i < x; i++) {
-	    System.out.print("a");
+	BigInteger x = new BigInteger("2");
+	int count = 1;
+	while (true) {
+	    x = x.multiply(x);
+	    count++;
+	    System.out.println(count + ":\n" + x.toString());
 	}
     }
 }
