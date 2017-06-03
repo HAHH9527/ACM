@@ -1,4 +1,4 @@
-package data20170422.t1;
+package date20170422.t1;
 
 import java.util.Scanner;
 

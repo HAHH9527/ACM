@@ -1,4 +1,4 @@
-package data20170422.t1;
+package date20170422.t1;
 
 public class ThisLinkList<E> extends MyLinkList<E> {
 
