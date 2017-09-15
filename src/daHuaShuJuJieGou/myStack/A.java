@@ -5,23 +5,23 @@ public class A<E> {
     private E value;
 
     public A(E obj) {
-	this.setValue(obj);
+        this.setValue(obj);
     }
 
     public A getHead() {
-	return head;
+        return head;
     }
 
     public void setHead(A head) {
-	this.head = head;
+        this.head = head;
     }
 
     public E getValue() {
-	return value;
+        return value;
     }
 
     public void setValue(E value) {
-	this.value = value;
+        this.value = value;
     }
 
 }

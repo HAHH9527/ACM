@@ -4,30 +4,30 @@ import java.util.Scanner;
 
 public class Main1 {
     public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	int x = sc.nextInt();
-	boolean flag3 = false, flag5 = false, flag7 = false;
-	if (x % 3 == 0) {
-	    flag3 = true;
-	}
-	if (x % 5 == 0) {
-	    flag5 = true;
-	}
-	if (x % 7 == 0) {
-	    flag7 = true;
-	}
-	if (flag3 && flag5 && flag7) {
-	    System.out.println("ÄÜÍ¬Ê±±»3¡¢5¡¢7Õû³ý");
-	} else if (flag3 && flag5) {
-	    System.out.println("ÄÜÍ¬Ê±±»3¡¢5Õû³ý");
-	} else if (flag3 && flag7) {
-	    System.out.println("ÄÜÍ¬Ê±±»3¡¢7Õû³ý");
-	} else if (flag5 && flag7) {
-	    System.out.println("ÄÜÍ¬Ê±±»5¡¢7Õû³ý");
-	} else if (flag3 || flag5 || flag7) {
-	    System.out.println("Ö»ÄÜ±»3¡¢5¡¢7ÖÐµÄÒ»¸öÕû³ý");
-	} else {
-	    System.out.println("²»ÄÜ±»3¡¢5¡¢7ÈÎÒ»¸öÕû³ý");
-	}
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        boolean flag3 = false, flag5 = false, flag7 = false;
+        if (x % 3 == 0) {
+            flag3 = true;
+        }
+        if (x % 5 == 0) {
+            flag5 = true;
+        }
+        if (x % 7 == 0) {
+            flag7 = true;
+        }
+        if (flag3 && flag5 && flag7) {
+            System.out.println("ï¿½ï¿½Í¬Ê±ï¿½ï¿½3ï¿½ï¿½5ï¿½ï¿½7ï¿½ï¿½ï¿½ï¿½");
+        } else if (flag3 && flag5) {
+            System.out.println("ï¿½ï¿½Í¬Ê±ï¿½ï¿½3ï¿½ï¿½5ï¿½ï¿½ï¿½ï¿½");
+        } else if (flag3 && flag7) {
+            System.out.println("ï¿½ï¿½Í¬Ê±ï¿½ï¿½3ï¿½ï¿½7ï¿½ï¿½ï¿½ï¿½");
+        } else if (flag5 && flag7) {
+            System.out.println("ï¿½ï¿½Í¬Ê±ï¿½ï¿½5ï¿½ï¿½7ï¿½ï¿½ï¿½ï¿½");
+        } else if (flag3 || flag5 || flag7) {
+            System.out.println("Ö»ï¿½Ü±ï¿½3ï¿½ï¿½5ï¿½ï¿½7ï¿½Ðµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        } else {
+            System.out.println("ï¿½ï¿½ï¿½Ü±ï¿½3ï¿½ï¿½5ï¿½ï¿½7ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        }
     }
 }

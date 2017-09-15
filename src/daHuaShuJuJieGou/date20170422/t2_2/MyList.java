@@ -1,10 +1,8 @@
 package daHuaShuJuJieGou.date20170422.t2_2;
 
 /**
- * 
- * @author 9527Number
- *
  * @param <T>
+ * @author 9527Number
  */
 public interface MyList<T> {
     public void add(T obj) throws Exception;

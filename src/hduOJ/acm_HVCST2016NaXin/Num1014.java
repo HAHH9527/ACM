@@ -8,7 +8,6 @@ package hduOJ.acm_HVCST2016NaXin;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num1014 {
@@ -20,7 +19,7 @@ public class Num1014 {
             long y = 0;
             long m = sc.nextLong();
             long n = sc.nextLong();
-            if (m >n){
+            if (m > n) {
                 long t = m;
                 m = n;
                 n = t;

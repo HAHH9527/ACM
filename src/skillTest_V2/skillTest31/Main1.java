@@ -2,13 +2,13 @@ package skillTest_V2.skillTest31;
 
 public class Main1 {
     public static void main(String[] args) {
-	int all = 48;
-	int lunZi = 172;
-	for (int x = 0; x <= all; x++) {
-	    int y = all - x;
-	    if (x * 3 + y * 4 == lunZi) {
-		System.out.println("Ä¦ÍÐÊýÁ¿£º" + x + "\tÆû³µÊýÁ¿£º" + y);
-	    }
-	}
+        int all = 48;
+        int lunZi = 172;
+        for (int x = 0; x <= all; x++) {
+            int y = all - x;
+            if (x * 3 + y * 4 == lunZi) {
+                System.out.println("Ä¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + x + "\tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + y);
+            }
+        }
     }
 }

@@ -4,27 +4,27 @@ import java.util.Scanner;
 
 public class Main1 {
     public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	System.out.print("ÇëÊäÈëÔÂ·Ý£º");
-	int month = sc.nextInt();
-	System.out.print("ÇëÊäÈëÆ±Êý£º");
-	int ticket = sc.nextInt();
-	if (month >= 7 && month <= 9) {
-	    if (ticket > 20) {
-		System.out.println("ÓÅ»Ý15%");
-	    } else {
-		System.out.println("ÓÅ»Ý5%");
-	    }
-	} else if (month >= 1 && month <= 5) {
-	    if (ticket > 20) {
-		System.out.println("ÓÅ»Ý30%");
-	    } else {
-		System.out.println("ÓÅ»Ý20%");
-	    }
-	} else if (month >= 1 && month <= 12) {
-	    System.out.println("ÓÅ»Ý10%");
-	} else {
-	    System.out.println("ÇëÊäÈëÕýÈ·µÄÔÂ·Ý£¡");
-	}
+        Scanner sc = new Scanner(System.in);
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·Ý£ï¿½");
+        int month = sc.nextInt();
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½ï¿½");
+        int ticket = sc.nextInt();
+        if (month >= 7 && month <= 9) {
+            if (ticket > 20) {
+                System.out.println("ï¿½Å»ï¿½15%");
+            } else {
+                System.out.println("ï¿½Å»ï¿½5%");
+            }
+        } else if (month >= 1 && month <= 5) {
+            if (ticket > 20) {
+                System.out.println("ï¿½Å»ï¿½30%");
+            } else {
+                System.out.println("ï¿½Å»ï¿½20%");
+            }
+        } else if (month >= 1 && month <= 12) {
+            System.out.println("ï¿½Å»ï¿½10%");
+        } else {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½Â·Ý£ï¿½");
+        }
     }
 }

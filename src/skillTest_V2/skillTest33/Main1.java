@@ -4,52 +4,52 @@ import java.util.Scanner;
 
 public class Main1 {
     public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	String str = sc.next();
-	char[] c = str.toCharArray();
-	for (char temp : c) {
-	    switch (temp) {
-	    case '0':
-		System.out.print("Áã");
-		break;
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        char[] c = str.toCharArray();
+        for (char temp : c) {
+            switch (temp) {
+                case '0':
+                    System.out.print("ï¿½ï¿½");
+                    break;
 
-	    case '1':
-		System.out.print("Ò»");
-		break;
+                case '1':
+                    System.out.print("Ò»");
+                    break;
 
-	    case '2':
-		System.out.print("¶þ");
-		break;
+                case '2':
+                    System.out.print("ï¿½ï¿½");
+                    break;
 
-	    case '3':
-		System.out.print("Èý");
-		break;
+                case '3':
+                    System.out.print("ï¿½ï¿½");
+                    break;
 
-	    case '4':
-		System.out.print("ËÄ");
-		break;
+                case '4':
+                    System.out.print("ï¿½ï¿½");
+                    break;
 
-	    case '5':
-		System.out.print("Îå");
-		break;
+                case '5':
+                    System.out.print("ï¿½ï¿½");
+                    break;
 
-	    case '6':
-		System.out.print("Áù");
-		break;
+                case '6':
+                    System.out.print("ï¿½ï¿½");
+                    break;
 
-	    case '7':
-		System.out.print("Æß");
-		break;
+                case '7':
+                    System.out.print("ï¿½ï¿½");
+                    break;
 
-	    case '8':
-		System.out.print("°Ë");
-		break;
+                case '8':
+                    System.out.print("ï¿½ï¿½");
+                    break;
 
-	    case '9':
-		System.out.print("¾Å");
-		break;
-	    }
-	}
-	System.out.println();
+                case '9':
+                    System.out.print("ï¿½ï¿½");
+                    break;
+            }
+        }
+        System.out.println();
     }
 }

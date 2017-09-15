@@ -8,7 +8,6 @@ package hduOJ.date20161217;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num1001 {
@@ -38,7 +37,7 @@ public class Num1001 {
                     double temp = x[n] / x[n - m] / x[m];
                     out = temp;
                 }
-                System.out.printf("%.0f",out);
+                System.out.printf("%.0f", out);
                 System.out.println("");
             }
         }

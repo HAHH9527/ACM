@@ -1,95 +1,92 @@
 package daHuaShuJuJieGou.myStack;
 
 /**
- * @version 1.1.1
- * 
- * @author HAHH9527
- *
  * @param <E>
+ * @author HAHH9527
+ * @version 1.1.1
  */
 public class MyStack<E> {
     private int size;
     private A<E> top;
 
     public MyStack() {
-	size = 0;
+        size = 0;
     }
 
     /**
-     * ÈëÕ»
-     * 
+     * ï¿½ï¿½Õ»
+     *
      * @param obj
      */
     public void push(E obj) {
-	A<E> temp = new A<E>(obj);
-	if (this.size == 0) {
-	    top = temp;
-	} else {
-	    temp.setHead(top);
-	    top = temp;
-	}
-	size++;
+        A<E> temp = new A<E>(obj);
+        if (this.size == 0) {
+            top = temp;
+        } else {
+            temp.setHead(top);
+            top = temp;
+        }
+        size++;
     }
 
     /**
-     * È¡µÃÕ»¶¥ÔªËØ£¬²»µ¯³ö
-     * 
-     * @return Õ»¶¥ÔªËØ
+     * È¡ï¿½ï¿½Õ»ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     *
+     * @return Õ»ï¿½ï¿½Ôªï¿½ï¿½
      */
     public E peek() {
-	return top.getValue();
+        return top.getValue();
     }
 
     /**
-     * È¡µÃÕ»¶¥ÔªËØ£¬²¢µ¯³ö
-     * 
-     * @return ±»µ¯³öµÄÕ»¶¥ÔªËØ
+     * È¡ï¿½ï¿½Õ»ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     *
+     * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½Ôªï¿½ï¿½
      */
     public E pop() {
-	A<E> temp = top;
-	top = top.getHead();
-	size--;
-	return temp.getValue();
+        A<E> temp = top;
+        top = top.getHead();
+        size--;
+        return temp.getValue();
     }
 
     /**
-     * ²éÕÒobjÔÚ´ËÕ»µÄµÚÄÄ¸öÎ»ÖÃ
-     * 
+     * ï¿½ï¿½ï¿½ï¿½objï¿½Ú´ï¿½Õ»ï¿½Äµï¿½ï¿½Ä¸ï¿½Î»ï¿½ï¿½
+     *
      * @param obj
-     * @return objËùÔÚÎ»ÖÃ
+     * @return objï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
      */
     public int search(E obj) {
-	A<E> temp = top;
-	int count = size - 1;
-	while (obj != temp.getValue()) {
-	    temp = temp.getHead();
-	    count--;
-	    if (count == -1) {
-		break;
-	    }
-	}
-	return count;
+        A<E> temp = top;
+        int count = size - 1;
+        while (obj != temp.getValue()) {
+            temp = temp.getHead();
+            count--;
+            if (count == -1) {
+                break;
+            }
+        }
+        return count;
     }
 
     /**
-     * ÑéÖ¤´ËÕ»ÊÇ·ñÎª¿ÕÕ»
-     * 
-     * @return ¿ÕÕ»·µ»Øtrue
+     * ï¿½ï¿½Ö¤ï¿½ï¿½Õ»ï¿½Ç·ï¿½Îªï¿½ï¿½Õ»
+     *
+     * @return ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½true
      */
     public boolean empty() {
-	if (size == 0) {
-	    return true;
-	} else {
-	    return false;
-	}
+        if (size == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
-     * 
-     * @return ´ËÕ»µÄ³¤¶È
+     * @return ï¿½ï¿½Õ»ï¿½Ä³ï¿½ï¿½ï¿½
      */
     public int getSize() {
-	return size;
+        return size;
     }
 
 }

@@ -6,9 +6,9 @@
 package hduOJ.date20161112;
 
 /**
- *
  * @author 9527number
  */
+
 import java.util.Scanner;
 
 public class Num1006 {

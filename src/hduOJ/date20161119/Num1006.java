@@ -8,11 +8,10 @@ package hduOJ.date20161119;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num1006 {
-    
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {

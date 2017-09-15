@@ -8,7 +8,6 @@ package hduOJ.date20161112;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num1002_2 {
@@ -21,21 +20,21 @@ public class Num1002_2 {
             int mn = m * n;
             int[] all = new int[mn];
             for (int i = 0; i < mn; i++) {
-                    all[i] = sc.nextInt();
+                all[i] = sc.nextInt();
             }
             int max = 0;
             int xy = 0;
             for (int i = 0; i < mn; i++) {
-                    int temp;
-                    if (all[i] > 0) {
-                        temp = all[i];
-                    } else {
-                        temp = -all[i];
-                    }
-                    if (temp > max) {
-                        max = temp;
-                        xy = i;
-                    }
+                int temp;
+                if (all[i] > 0) {
+                    temp = all[i];
+                } else {
+                    temp = -all[i];
+                }
+                if (temp > max) {
+                    max = temp;
+                    xy = i;
+                }
             }
             int x = xy / n;
             int y = xy % n;

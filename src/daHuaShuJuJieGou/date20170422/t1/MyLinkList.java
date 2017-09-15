@@ -1,123 +1,121 @@
 package daHuaShuJuJieGou.date20170422.t1;
 
 /**
- * @time 2017Äê4ÔÂ18ÈÕ22µã02·Ö£¨½«Í·Î²½Úµã¶¼²»´¢´æÊý¾Ý
- * 
- * @author 9527Number
- *
  * @param <E>
+ * @author 9527Number
+ * @time 2017ï¿½ï¿½4ï¿½ï¿½18ï¿½ï¿½22ï¿½ï¿½02ï¿½Ö£ï¿½ï¿½ï¿½Í·Î²ï¿½Úµã¶¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class MyLinkList<E> implements MyList<E> {
     int size;
     A head, current, end;
 
     public MyLinkList() {
-	head = new A();
-	end = new A();
-	head.setNext(end);
-	end.setPre(head);
+        head = new A();
+        end = new A();
+        head.setNext(end);
+        end.setPre(head);
     }
 
     @Override
     public void add(E obj) throws Exception {
-	A newA = new A(obj);
-	current = end.getPre();
-	current.setNext(newA);
-	newA.setPre(current);
-	end.setPre(newA);
-	newA.setNext(end);
-	// if (head.getNext() == null) {
-	// head.setNext(newA);
-	// end = newA;
-	// } else {
-	// current.setNext(newA);
-	// newA.setPre(current);
-	// end = newA;
-	// }
-	size++;
+        A newA = new A(obj);
+        current = end.getPre();
+        current.setNext(newA);
+        newA.setPre(current);
+        end.setPre(newA);
+        newA.setNext(end);
+        // if (head.getNext() == null) {
+        // head.setNext(newA);
+        // end = newA;
+        // } else {
+        // current.setNext(newA);
+        // newA.setPre(current);
+        // end = newA;
+        // }
+        size++;
     }
 
     @Override
     /**
-     * ¿ÉÄÜÓÐÎÊÌâµÄ²åÈë£¨ÔÚµÚÒ»¸öÔªËØÖ®ºó²åÈëÓÃµÄÊÇ1£¬¶ø²»ÊÇ0
-     * 
-     * @time 2017Äê4ÔÂ18ÈÕ11µã19·Ö£¨Ç¿ÖÆ¸Ä±äiÔÝÊ±½â¾öÎÊÌâ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ë£¨ï¿½Úµï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0
+     *
+     * @time 2017ï¿½ï¿½4ï¿½ï¿½18ï¿½ï¿½11ï¿½ï¿½19ï¿½Ö£ï¿½Ç¿ï¿½Æ¸Ä±ï¿½iï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public void add(int i, E obj) throws Exception {
-	if (i == size - 1) {
-	    add(obj);
-	} else {
-	    goTo(i);
-	    A newA = new A(obj);
-	    A temp = current.getNext();
-	    current.setNext(newA);
-	    temp.setPre(newA);
-	    newA.setNext(temp);
-	    newA.setPre(current);
-	    size++;
-	}
+        if (i == size - 1) {
+            add(obj);
+        } else {
+            goTo(i);
+            A newA = new A(obj);
+            A temp = current.getNext();
+            current.setNext(newA);
+            temp.setPre(newA);
+            newA.setNext(temp);
+            newA.setPre(current);
+            size++;
+        }
     }
 
     @Override
     /**
-     * ²»ÄÜ±»ÕýÈ·Ê¹ÓÃµÄ·½·¨
-     * 
-     * @time 2017Äê4ÔÂ18ÈÕ11µã18·Ö£¨É¾³ý×îºóÒ»¸ö»¹ÊÇÓÐÎÊÌâ
+     * ï¿½ï¿½ï¿½Ü±ï¿½ï¿½ï¿½È·Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½
+     *
+     * @time 2017ï¿½ï¿½4ï¿½ï¿½18ï¿½ï¿½11ï¿½ï¿½18ï¿½Ö£ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public E del(int i) throws Exception {
-	goTo(i);
-	A tempPre = current.getPre();
-	A tempNext = current.getNext();
-	tempPre.setNext(tempNext);
-	tempNext.setPre(tempPre);
-	size--;
-	return (E) current.getValue();
+        goTo(i);
+        A tempPre = current.getPre();
+        A tempNext = current.getNext();
+        tempPre.setNext(tempNext);
+        tempNext.setPre(tempPre);
+        size--;
+        return (E) current.getValue();
     }
 
     @Override
     public E get(int i) throws Exception {
-	goTo(i);
-	return (E) current.getValue();
+        goTo(i);
+        return (E) current.getValue();
     }
 
     @Override
     public int size() {
-	return size;
+        return size;
     }
 
     @Override
     /**
-     * Î´Ð´µÄ·½·¨
-     * 
-     * @time 2017Äê4ÔÂ18ÈÕ11µã20·Ö£¨ËÑË÷·½·¨ÒÑÍê³É
+     * Î´Ð´ï¿½Ä·ï¿½ï¿½ï¿½
+     *
+     * @time 2017ï¿½ï¿½4ï¿½ï¿½18ï¿½ï¿½11ï¿½ï¿½20ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public int search(E obj) {
-	int count = 0;
-	current = head.getNext();
-	while (obj != (E) current.getValue()) {
-	    if (current.getNext() == null) {
-		return -1;
-	    }
-	    current = current.getNext();
-	    count++;
-	}
-	return count;
+        int count = 0;
+        current = head.getNext();
+        while (obj != (E) current.getValue()) {
+            if (current.getNext() == null) {
+                return -1;
+            }
+            current = current.getNext();
+            count++;
+        }
+        return count;
     }
 
     @Override
     public boolean isEmpty() {
-	return size == 0;
+        return size == 0;
     }
 
     private void goTo(int i) throws Exception {
-	if (i >= size || i < 0) {
-	    throw new Exception("ÔÚLinkListÖÐÕÒ²»µ½¶ÔÓ¦Obj");
-	}
-	current = head.getNext();
-	// System.out.println("goTo()=" + current.getPre());
-	for (int count = 1; count <= i; count++) {
-	    current = current.getNext();
-	}
+        if (i >= size || i < 0) {
+            throw new Exception("ï¿½ï¿½LinkListï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦Obj");
+        }
+        current = head.getNext();
+        // System.out.println("goTo()=" + current.getPre());
+        for (int count = 1; count <= i; count++) {
+            current = current.getNext();
+        }
     }
 
 }

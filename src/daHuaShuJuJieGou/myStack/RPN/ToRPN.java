@@ -5,119 +5,119 @@ import java.util.Scanner;
 import daHuaShuJuJieGou.myStack.MyStack;
 
 /**
- * @version 1.2
  * @author HAHH9527
- * @ÈÕÖ¾ ½â¾ö¸ñÊ½ÎÊÌâ£¬ÊäÈëÔÚÃ¿¸ö·ûºÅÁ½±ß´ø¿Õ¸ñ£¬´æ´¢Ö±½ÓÊ¹ÓÃ×Ö·û´®£¬Íê³É¼ÆËã·½·¨
+ * @version 1.2
+ * @ï¿½ï¿½Ö¾ ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß´ï¿½ï¿½Õ¸ñ£¬´æ´¢Ö±ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ã·½ï¿½ï¿½
  */
 public class ToRPN {
-    private static MyStack<String> output = null;// ´æ·ÅÄæ²¨À¼±í´ïÊ½µÄÕ»
-    private static MyStack<String> temp = null;// ´æ´¢¼ÆËã·ûºÅµÄÕ»
-    private static String[] input = null;// ÐèÒª´¦ÀíµÄ×Ö·û
+    private static MyStack<String> output = null;// ï¿½ï¿½ï¿½ï¿½æ²¨ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Õ»
+    private static MyStack<String> temp = null;// ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½Õ»
+    private static String[] input = null;// ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
     private static int i = 0;
 
     public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	while (sc.hasNext()) {
-	    output = new MyStack<String>();
-	    temp = new MyStack<String>();
-	    String str = sc.nextLine();
-	    input = str.split(" ");
-	    i = 0;
-	    fun();
-	    // display();// ÏÔÊ¾·½·¨£¬²»ÐèÒªÊ¹ÓÃ
-	    returnAnswer();
-	    toNull();
-	}
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            output = new MyStack<String>();
+            temp = new MyStack<String>();
+            String str = sc.nextLine();
+            input = str.split(" ");
+            i = 0;
+            fun();
+            // display();// ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ï¿½
+            returnAnswer();
+            toNull();
+        }
     }
 
     private static void fun() {
-	for (; i < input.length; i++) {
-	    if (input[i].equals("+") || input[i].equals("-")) {
-		fun1();
-	    } else if (input[i].equals("*") || input[i].equals("/")) {
-		fun2();
-	    } else if (input[i].equals("(") || input[i].equals(")")) {
-		fun3();
-	    } else {
-		fun0();
-	    }
-	}
-	while (temp.empty() == false) {
-	    output.push(temp.pop());
-	}
+        for (; i < input.length; i++) {
+            if (input[i].equals("+") || input[i].equals("-")) {
+                fun1();
+            } else if (input[i].equals("*") || input[i].equals("/")) {
+                fun2();
+            } else if (input[i].equals("(") || input[i].equals(")")) {
+                fun3();
+            } else {
+                fun0();
+            }
+        }
+        while (temp.empty() == false) {
+            output.push(temp.pop());
+        }
     }
 
-    private static void fun0() {// ÎªÊý×ÖÊ±µÄÇé¿ö
-	output.push(input[i]);
+    private static void fun0() {// Îªï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
+        output.push(input[i]);
     }
 
-    private static void fun1() {// Îª+»ò-Ê±µÄÇé¿ö
-	while (temp.empty() == false) {
-	    if (temp.empty() == false && temp.peek().equals("(")) {// Åöµ½(Ê±Í£Ö¹µ¯³ö
-		break;
-	    }
-	    output.push(temp.pop());
-	}
-	temp.push(input[i]);
+    private static void fun1() {// Îª+ï¿½ï¿½-Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
+        while (temp.empty() == false) {
+            if (temp.empty() == false && temp.peek().equals("(")) {// ï¿½ï¿½ï¿½ï¿½(Ê±Í£Ö¹ï¿½ï¿½ï¿½ï¿½
+                break;
+            }
+            output.push(temp.pop());
+        }
+        temp.push(input[i]);
     }
 
-    private static void fun2() {// Îª*»ò/Ê±µÄÇé¿ö
-	temp.push(input[i]);
+    private static void fun2() {// Îª*ï¿½ï¿½/Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
+        temp.push(input[i]);
     }
 
-    private static void fun3() {// Îª(»ò)Ê±µÄÇé¿ö
-	if (input[i].equals("(")) {
-	    temp.push(input[i]);
-	} else if (input[i].equals(")")) {
-	    while (temp.peek().equals("(") == false) {
-		output.push(temp.pop());
-	    }
-	    temp.pop();
-	}
+    private static void fun3() {// Îª(ï¿½ï¿½)Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (input[i].equals("(")) {
+            temp.push(input[i]);
+        } else if (input[i].equals(")")) {
+            while (temp.peek().equals("(") == false) {
+                output.push(temp.pop());
+            }
+            temp.pop();
+        }
     }
 
-    private static void display() {// Êä³öÄæ²¨À¼±í´ïÊ½
-	String str = "";
-	while (output.empty() == false) {
-	    str = output.pop() + str;
-	}
-	System.out.println(str);
+    private static void display() {// ï¿½ï¿½ï¿½ï¿½æ²¨ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
+        String str = "";
+        while (output.empty() == false) {
+            str = output.pop() + str;
+        }
+        System.out.println(str);
     }
 
     private static void returnAnswer() {
-	MyStack<String> temp = new MyStack<String>();
-	while (output.empty() == false) {
-	    temp.push(output.pop());
-	}
-	MyStack<String> answer = new MyStack<String>();
-	while (temp.empty() == false) {
-	    if (temp.peek().equals("+")) {
-		temp.pop();
-		String count = String.valueOf(Double.valueOf(answer.pop()) + Double.valueOf(answer.pop()));
-		answer.push(count);
-	    } else if (temp.peek().equals("-")) {
-		temp.pop();
-		String count = String.valueOf(Double.valueOf(answer.pop()) - Double.valueOf(answer.pop()));
-		answer.push(count);
-	    } else if (temp.peek().equals("*")) {
-		temp.pop();
-		String count = String.valueOf(Double.valueOf(answer.pop()) * Double.valueOf(answer.pop()));
-		answer.push(count);
-	    } else if (temp.peek().equals("/")) {
-		temp.pop();
-		String count = String.valueOf(Double.valueOf(answer.pop()) / Double.valueOf(answer.pop()));
-		answer.push(count);
-	    } else {
-		answer.push(temp.pop());
-	    }
-	}
-	System.out.println(answer.pop());
+        MyStack<String> temp = new MyStack<String>();
+        while (output.empty() == false) {
+            temp.push(output.pop());
+        }
+        MyStack<String> answer = new MyStack<String>();
+        while (temp.empty() == false) {
+            if (temp.peek().equals("+")) {
+                temp.pop();
+                String count = String.valueOf(Double.valueOf(answer.pop()) + Double.valueOf(answer.pop()));
+                answer.push(count);
+            } else if (temp.peek().equals("-")) {
+                temp.pop();
+                String count = String.valueOf(Double.valueOf(answer.pop()) - Double.valueOf(answer.pop()));
+                answer.push(count);
+            } else if (temp.peek().equals("*")) {
+                temp.pop();
+                String count = String.valueOf(Double.valueOf(answer.pop()) * Double.valueOf(answer.pop()));
+                answer.push(count);
+            } else if (temp.peek().equals("/")) {
+                temp.pop();
+                String count = String.valueOf(Double.valueOf(answer.pop()) / Double.valueOf(answer.pop()));
+                answer.push(count);
+            } else {
+                answer.push(temp.pop());
+            }
+        }
+        System.out.println(answer.pop());
     }
 
     private static void toNull() {
-	output = null;
-	temp = null;
-	input = null;
-	i = 0;
+        output = null;
+        temp = null;
+        input = null;
+        i = 0;
     }
 }

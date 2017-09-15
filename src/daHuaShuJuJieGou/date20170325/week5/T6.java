@@ -43,74 +43,70 @@ public class T6 {
     static long gbs_30 = 2329089562800l;
 
     /**
-     * 
-     * @param arr
-     *            ´æ´¢·ÖÄ¸µÄÊý×é
-     * @param k
-     *            µ±Ç°ÏÂ±êÎ»ÖÃ
-     * @param t
-     *            Ç°ÃæÒ»¸ö·ÖÄ¸
+     * @param arr ï¿½æ´¢ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     * @param k   ï¿½ï¿½Ç°ï¿½Â±ï¿½Î»ï¿½ï¿½
+     * @param t   Ç°ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¸
      */
     public static void f2(int arr[], int k, int t) {
 
-	// if (k == arr.length) {
-	// long sum = 0;
-	// if (res == gbs_30) {
-	// for (int i = 0; i < arr.length; i++) {
-	// // if (i == arr.length - 1) {
-	// // System.out.println("1/" + arr[i]);
-	// // } else {
-	// // System.out.print("1/" + arr[i] + " ");
-	// // }
-	// System.out.print(arr[i] + " ");
-	// }
-	// System.out.println();
-	// }
-	// return;
-	// }
-	//
-	// if (k == arr.length - 3) {// ÔÚÕâ¸öÎ»ÖÃ¼ì²éÇ°ÃæµÄÏîÊýºÍÊÇ·ñ³¬¹ýÁË1
-	// if (res > gbs_30) {
-	// return;
-	// }
-	// }
-	if (k == arr.length - 1) {
-	    long sum = 0;
+        // if (k == arr.length) {
+        // long sum = 0;
+        // if (res == gbs_30) {
+        // for (int i = 0; i < arr.length; i++) {
+        // // if (i == arr.length - 1) {
+        // // System.out.println("1/" + arr[i]);
+        // // } else {
+        // // System.out.print("1/" + arr[i] + " ");
+        // // }
+        // System.out.print(arr[i] + " ");
+        // }
+        // System.out.println();
+        // }
+        // return;
+        // }
+        //
+        // if (k == arr.length - 3) {// ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã¼ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ñ³¬¹ï¿½ï¿½ï¿½1
+        // if (res > gbs_30) {
+        // return;
+        // }
+        // }
+        if (k == arr.length - 1) {
+            long sum = 0;
 
-	    for (int i = 0; i < arr.length; i++) {
-		sum += gbs_30 / (long) arr[i];
-		if (sum > gbs_30) {
-		    System.out.println("exit");
-		    for (int j = 0; j < arr.length - 1; j++) {
-			System.out.print("1/" + arr[j] + " ");
-		    }
-		    System.out.println("1/" + (arr.length - 1));
-		    return;
-		}
-	    }
+            for (int i = 0; i < arr.length; i++) {
+                sum += gbs_30 / (long) arr[i];
+                if (sum > gbs_30) {
+                    System.out.println("exit");
+                    for (int j = 0; j < arr.length - 1; j++) {
+                        System.out.print("1/" + arr[j] + " ");
+                    }
+                    System.out.println("1/" + (arr.length - 1));
+                    return;
+                }
+            }
 
-	    if (sum == gbs_30) {
-		for (int i = 0; i < arr.length - 1; i++) {
-		    System.out.print("1/" + arr[i] + " ");
-		}
-		System.out.println(arr.length - 1);
-	    }
-	    return;
-	}
+            if (sum == gbs_30) {
+                for (int i = 0; i < arr.length - 1; i++) {
+                    System.out.print("1/" + arr[i] + " ");
+                }
+                System.out.println(arr.length - 1);
+            }
+            return;
+        }
 
-	for (int i = t + 1; i < 30; i++) {// ÌâÄ¿Ó¦¸ÃÊÇ·ÖÄ¸²»ÄÜ³¬¹ý30
-	    arr[k] = i;
-	    f2(arr, k + 1, i);
-	}
+        for (int i = t + 1; i < 30; i++) {// ï¿½ï¿½Ä¿Ó¦ï¿½ï¿½ï¿½Ç·ï¿½Ä¸ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½30
+            arr[k] = i;
+            f2(arr, k + 1, i);
+        }
     }
 
     public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	while (sc.hasNext()) {
-	    // System.out.println(gbs_30);
-	    int n = sc.nextInt();
-	    int[] arr = new int[n];
-	    f2(arr, 0, 0);
-	}
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            // System.out.println(gbs_30);
+            int n = sc.nextInt();
+            int[] arr = new int[n];
+            f2(arr, 0, 0);
+        }
     }
 }

@@ -8,11 +8,10 @@ package test;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Test {
-    
+
     public static int removeElement(int A[], int n, int elem) {
         int index = n;
         for (int i = 0; i < n; i++) {
@@ -26,8 +25,8 @@ public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
-           int n = sc.nextInt();
-           int[] A = new int[n];
+            int n = sc.nextInt();
+            int[] A = new int[n];
             for (int i = 0; i < n; i++) {
                 A[i] = sc.nextInt();
             }

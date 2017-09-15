@@ -8,7 +8,6 @@ package hduOJ.date20161217;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num1002 {

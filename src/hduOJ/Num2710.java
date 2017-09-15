@@ -8,7 +8,6 @@ package hduOJ;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num2710 {
@@ -26,7 +25,7 @@ public class Num2710 {
             }
         }
     }
-    
+
     public static void main(String[] args) {
         f();
         Scanner sc = new Scanner(System.in);

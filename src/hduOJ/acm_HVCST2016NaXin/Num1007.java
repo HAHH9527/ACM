@@ -8,7 +8,6 @@ package hduOJ.acm_HVCST2016NaXin;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num1007 {
@@ -16,7 +15,7 @@ public class Num1007 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
-            for (int t = 1;; t++) {
+            for (int t = 1; ; t++) {
                 String A = sc.next();
                 if ("@".equals(A)) {
                     break;

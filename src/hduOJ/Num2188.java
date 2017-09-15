@@ -6,9 +6,8 @@
 package hduOJ;
 
 /**
- *
  * @author 9527number
  */
 public class Num2188 {
-    
+
 }

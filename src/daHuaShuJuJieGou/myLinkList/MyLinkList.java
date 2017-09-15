@@ -1,144 +1,141 @@
 package daHuaShuJuJieGou.myLinkList;
 
 /**
- * @time 2017Äê4ÔÂ18ÈÕ22µã02·Ö£¨½«Í·Î²½Úµã¶¼²»´¢´æÊý¾Ý
- * 
- * @author 9527Number
- * 
- * @version 1.2
- *
  * @param <E>
+ * @author 9527Number
+ * @version 1.2
+ * @time 2017ï¿½ï¿½4ï¿½ï¿½18ï¿½ï¿½22ï¿½ï¿½02ï¿½Ö£ï¿½ï¿½ï¿½Í·Î²ï¿½Úµã¶¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class MyLinkList<E> implements MyList<E> {
     int size;
     A head, current, end;
 
     public MyLinkList() {
-	head = new A();
-	end = new A();
-	head.setNext(end);
-	end.setPre(head);
+        head = new A();
+        end = new A();
+        head.setNext(end);
+        end.setPre(head);
     }
 
     @Override
     /**
-     * Ìí¼Óobjµ½Á´±í×îºó
+     * ï¿½ï¿½ï¿½objï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public void add(E obj) throws Exception {
-	A newA = new A(obj);
-	current = end.getPre();
-	current.setNext(newA);
-	newA.setPre(current);
-	end.setPre(newA);
-	newA.setNext(end);
-	size++;
+        A newA = new A(obj);
+        current = end.getPre();
+        current.setNext(newA);
+        newA.setPre(current);
+        end.setPre(newA);
+        newA.setNext(end);
+        size++;
     }
 
     @Override
     /**
-     * ÔÚµÚi¸öÔªËØºóÃæ²åÈëobj
+     * ï¿½Úµï¿½iï¿½ï¿½Ôªï¿½Øºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½obj
      */
     public void add(int i, E obj) throws Exception {
-	if (i == size - 1) {
-	    add(obj);
-	} else {
-	    goTo(i);
-	    A newA = new A(obj);
-	    A temp = current.getNext();
-	    current.setNext(newA);
-	    temp.setPre(newA);
-	    newA.setNext(temp);
-	    newA.setPre(current);
-	    size++;
-	}
+        if (i == size - 1) {
+            add(obj);
+        } else {
+            goTo(i);
+            A newA = new A(obj);
+            A temp = current.getNext();
+            current.setNext(newA);
+            temp.setPre(newA);
+            newA.setNext(temp);
+            newA.setPre(current);
+            size++;
+        }
     }
 
     @Override
     /**
-     * É¾³ýÏÂ±êµÚi¸öµÄÔªËØ
-     * 
-     * @return ±»É¾µôµÄÔªËØ
+     * É¾ï¿½ï¿½ï¿½Â±ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+     *
+     * @return ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
      */
     public E del(int i) throws Exception {
-	goTo(i);
-	A tempPre = current.getPre();
-	A tempNext = current.getNext();
-	tempPre.setNext(tempNext);
-	tempNext.setPre(tempPre);
-	size--;
-	return (E) current.getValue();
+        goTo(i);
+        A tempPre = current.getPre();
+        A tempNext = current.getNext();
+        tempPre.setNext(tempNext);
+        tempNext.setPre(tempPre);
+        size--;
+        return (E) current.getValue();
     }
 
     @Override
     /**
-     * @return ÏÂ±êÎªiµÄÔªËØµÄÖµ
+     * @return ï¿½Â±ï¿½Îªiï¿½ï¿½Ôªï¿½Øµï¿½Öµ
      */
     public E get(int i) throws Exception {
-	goTo(i);
-	return (E) current.getValue();
+        goTo(i);
+        return (E) current.getValue();
     }
 
     @Override
     /**
-     * @return Á´±íµÄ³¤¶È
+     * @return ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
      */
     public int size() {
-	return size;
+        return size;
     }
 
     @Override
     /**
-     * ËÑË÷objµÄÎ»ÖÃ
-     * 
-     * @return obj¶ÔÓ¦µÄÏÂ±ê
+     * ï¿½ï¿½ï¿½ï¿½objï¿½ï¿½Î»ï¿½ï¿½
+     *
+     * @return objï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Â±ï¿½
      */
     public int search(E obj) {
-	int count = 0;
-	current = head.getNext();
-	while (obj != (E) current.getValue()) {
-	    if (current.getNext() == null) {
-		return -1;
-	    }
-	    current = current.getNext();
-	    count++;
-	}
-	return count;
+        int count = 0;
+        current = head.getNext();
+        while (obj != (E) current.getValue()) {
+            if (current.getNext() == null) {
+                return -1;
+            }
+            current = current.getNext();
+            count++;
+        }
+        return count;
     }
 
     @Override
     public boolean isEmpty() {
-	return size == 0;
+        return size == 0;
     }
 
     /**
-     * ½«Á´±í×ª»»³ÉÊý×é
-     * 
-     * @return Êý×é
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     *
+     * @return ï¿½ï¿½ï¿½ï¿½
      */
     public E[] toArrary() {
-	Object[] ret = new Object[size];
-	current = head;
-	for (int i = 0; i < ret.length; i++) {
-	    current = current.getNext();
-	    ret[i] = current.getValue();
-	}
-	return (E[]) ret;
+        Object[] ret = new Object[size];
+        current = head;
+        for (int i = 0; i < ret.length; i++) {
+            current = current.getNext();
+            ret[i] = current.getValue();
+        }
+        return (E[]) ret;
     }
 
     /**
-     * ½«currentÖ¸Ïò¶ÔÓ¦µÄÏÂ±ê
-     * 
+     * ï¿½ï¿½currentÖ¸ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Â±ï¿½
+     *
      * @param i
      * @throws Exception
      */
     private void goTo(int i) throws Exception {
-	if (i >= size || i < 0) {
-	    throw new Exception("ÔÚLinkListÖÐÕÒ²»µ½¶ÔÓ¦Obj");
-	}
-	current = head.getNext();
-	for (int count = 1; count <= i; count++) {
-	    current = current.getNext();
-	}
+        if (i >= size || i < 0) {
+            throw new Exception("ï¿½ï¿½LinkListï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦Obj");
+        }
+        current = head.getNext();
+        for (int count = 1; count <= i; count++) {
+            current = current.getNext();
+        }
     }
 
 }

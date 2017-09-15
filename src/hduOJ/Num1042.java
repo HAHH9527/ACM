@@ -9,7 +9,6 @@ import java.util.Scanner;
 import java.math.BigInteger;
 
 /**
- *
  * @author 9527number
  */
 public class Num1042 {

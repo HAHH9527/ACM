@@ -6,16 +6,18 @@
 package save;
 
 /**
- *Í³¼ÆÊı×Ö ×ÖÄ¸ ºº×Ö
+ * Í³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¸ ï¿½ï¿½ï¿½ï¿½
+ *
  * @author 9527number
  */
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CountTest {
 
     public static void main(String args[]) {
-        String str = "asdvdfdDERE123ABCD0012587ÎÒÒ»¶şÈıËÄÎå";
+        String str = "asdvdfdDERE123ABCD0012587ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
         System.out.println("Numbers:" + countNumber(str));
         System.out.println("Letters:" + countLetter(str));
         System.out.println("Chinese:" + countChinese(str));

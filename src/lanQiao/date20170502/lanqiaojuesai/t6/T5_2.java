@@ -7,70 +7,70 @@ public class T5_2 {
     private static String s;
 
     public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	while (sc.hasNext()) {
-	    // long startTime = System.currentTimeMillis();// ªÒ»°µ±«∞ ±º‰
-	    s = sc.next();
-	    int n = sc.nextInt();
-	    allPassword = new int[n][26];
-	    for (int i = 0; i < n; i++) {
-		String str = sc.next();
-		char[] aPassword = str.toCharArray();
-		allPassword[i] = passwordFun(aPassword);
-	    }
-	    answer();
-	    allPassword = null;
-	    s = "";
-	    // long endTime = System.currentTimeMillis();
-	    // long runTime = endTime - startTime;
-	    // System.out.println("≤È—Ø‘À–– ±º‰∫¡√Î ˝ «: " + runTime + "ms");
-	    // System.out.println("‘À–– ±º‰ «: " + formatDuring(runTime));
-	}
-	// System.out.println((int) 'a' - 97);
-	// System.out.println((int) 'z' - 97);
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            // long startTime = System.currentTimeMillis();// ÔøΩÔøΩ»°ÔøΩÔøΩ«∞ ±ÔøΩÔøΩ
+            s = sc.next();
+            int n = sc.nextInt();
+            allPassword = new int[n][26];
+            for (int i = 0; i < n; i++) {
+                String str = sc.next();
+                char[] aPassword = str.toCharArray();
+                allPassword[i] = passwordFun(aPassword);
+            }
+            answer();
+            allPassword = null;
+            s = "";
+            // long endTime = System.currentTimeMillis();
+            // long runTime = endTime - startTime;
+            // System.out.println("ÔøΩÔøΩ—ØÔøΩÔøΩÔøΩÔøΩ ±ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ: " + runTime + "ms");
+            // System.out.println("ÔøΩÔøΩÔøΩÔøΩ ±ÔøΩÔøΩÔøΩÔøΩ: " + formatDuring(runTime));
+        }
+        // System.out.println((int) 'a' - 97);
+        // System.out.println((int) 'z' - 97);
     }
 
     private static int[] passwordFun(char[] aPassword) {
-	int[] ret = new int[26];
-	for (int i = 0; i < aPassword.length; i++) {
-	    int flag = (int) aPassword[i] - 97;
-	    ret[flag]++;
-	}
-	// for (int i = 0; i < ret.length; i++) {
-	// System.out.println((char) (i + 97) + ":" + ret[i]);
-	// }
-	return ret;
+        int[] ret = new int[26];
+        for (int i = 0; i < aPassword.length; i++) {
+            int flag = (int) aPassword[i] - 97;
+            ret[flag]++;
+        }
+        // for (int i = 0; i < ret.length; i++) {
+        // System.out.println((char) (i + 97) + ":" + ret[i]);
+        // }
+        return ret;
     }
 
     private static void answer() {
-	int count = 0;
-	while (s.length() >= 8) {
-	    String tempPasswordStr = s.substring(0, 8);
-	    char[] tempPasswordChar = tempPasswordStr.toCharArray();
-	    int[] tempPasswordInt = passwordFun(tempPasswordChar);
-	    // for (int i = 0; i < tempPasswordInt.length; i++) {
-	    // System.out.print((char) (i + 97) + ":" + tempPasswordInt[i] +
-	    // "\t");
-	    // }
-	    // System.out.println();
-	    for (int i = 0; i < allPassword.length; i++) {
-		boolean flag = true;
-		for (int i2 = 0; i2 < tempPasswordInt.length; i2++) {
-		    if (tempPasswordInt[i2] != allPassword[i][i2]) {
-			flag = false;
-			break;
-		    }
-		}
-		if (flag) {
-		    count++;
-		}
-		// if (allPassword[i].equals(tempPasswordInt)) {
-		// count++;
-		// }
-	    }
-	    s = s.substring(1);
-	}
-	System.out.println(count);
+        int count = 0;
+        while (s.length() >= 8) {
+            String tempPasswordStr = s.substring(0, 8);
+            char[] tempPasswordChar = tempPasswordStr.toCharArray();
+            int[] tempPasswordInt = passwordFun(tempPasswordChar);
+            // for (int i = 0; i < tempPasswordInt.length; i++) {
+            // System.out.print((char) (i + 97) + ":" + tempPasswordInt[i] +
+            // "\t");
+            // }
+            // System.out.println();
+            for (int i = 0; i < allPassword.length; i++) {
+                boolean flag = true;
+                for (int i2 = 0; i2 < tempPasswordInt.length; i2++) {
+                    if (tempPasswordInt[i2] != allPassword[i][i2]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    count++;
+                }
+                // if (allPassword[i].equals(tempPasswordInt)) {
+                // count++;
+                // }
+            }
+            s = s.substring(1);
+        }
+        System.out.println(count);
     }
 
     // public static String formatDuring(long mss) {

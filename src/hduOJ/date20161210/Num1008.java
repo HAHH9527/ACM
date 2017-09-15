@@ -8,7 +8,6 @@ package hduOJ.date20161210;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num1008 {
@@ -33,7 +32,7 @@ public class Num1008 {
             }
         }
     }
-    
+
     public static int ys(int n) {
         int count = 0;
         for (int i = 1; i <= n; i++) {

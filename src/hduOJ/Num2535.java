@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num2535 {

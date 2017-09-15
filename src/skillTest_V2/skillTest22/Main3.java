@@ -4,24 +4,25 @@ import java.util.Scanner;
 
 public class Main3 {
     public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	String str = sc.next();
-	char[] card = str.toCharArray();
-	out: if (card.length == 18) {
-	    for (int i = 0; i < card.length - 1; i++) {
-		if (card[i] < '0' || card[i] > '9') {
-		    break out;
-		}
-	    }
-	    if ((card[17] >= '0' && card[17] <= '9') || card[17] == 'X') {
-		if (card[16] % 2 != 0) {
-		    System.out.println("ÄÐ");
-		} else {
-		    System.out.println("Å®");
-		}
-		System.exit(0);
-	    }
-	}
-	System.out.println("ÇëÊäÈëÕýÈ·µÄÉí·ÝÖ¤ºÅ");
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        char[] card = str.toCharArray();
+        out:
+        if (card.length == 18) {
+            for (int i = 0; i < card.length - 1; i++) {
+                if (card[i] < '0' || card[i] > '9') {
+                    break out;
+                }
+            }
+            if ((card[17] >= '0' && card[17] <= '9') || card[17] == 'X') {
+                if (card[16] % 2 != 0) {
+                    System.out.println("ï¿½ï¿½");
+                } else {
+                    System.out.println("Å®");
+                }
+                System.exit(0);
+            }
+        }
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½");
     }
 }

@@ -8,7 +8,6 @@ package hduOJ.acm_HVCST2016NaXin;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num1004 {

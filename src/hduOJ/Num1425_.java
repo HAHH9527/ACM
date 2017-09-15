@@ -8,7 +8,6 @@ package hduOJ;
 import java.util.Scanner;
 
 /**
- *
  * @author 9527number
  */
 public class Num1425_ {
