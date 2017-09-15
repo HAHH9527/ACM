@@ -1,6 +1,8 @@
+package hduOJ;
+
 import java.util.Scanner;
 
-public class Main {
+public class Num2148 {
     public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	while (sc.hasNext()) {
