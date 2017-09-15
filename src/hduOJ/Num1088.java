@@ -8,8 +8,6 @@ package hduOJ;
 import java.util.Scanner;
 
 /**
- * 怎么能判断是否结束
- *
  * @author 9527number
  */
 public class Num1088 {
