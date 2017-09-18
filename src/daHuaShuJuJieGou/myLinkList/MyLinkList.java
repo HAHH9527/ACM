@@ -4,7 +4,7 @@ package daHuaShuJuJieGou.myLinkList;
  * @param <E>
  * @author 9527Number
  * @version 1.2
- * @time 2017��4��18��22��02�֣���ͷβ�ڵ㶼����������
+ * @time 2017年4月18日22点02分（将头尾节点都不储存数据
  */
 public class MyLinkList<E> implements MyList<E> {
     int size;
@@ -19,7 +19,7 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     /**
-     * ���obj���������
+     * 添加obj到链表最后
      */
     public void add(E obj) throws Exception {
         A newA = new A(obj);
@@ -33,7 +33,7 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     /**
-     * �ڵ�i��Ԫ�غ������obj
+     * 在第i个元素后面插入obj
      */
     public void add(int i, E obj) throws Exception {
         if (i == size - 1) {
@@ -52,9 +52,9 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     /**
-     * ɾ���±��i����Ԫ��
+     * 删除下标第i个的元素
      *
-     * @return ��ɾ����Ԫ��
+     * @return 被删掉的元素
      */
     public E del(int i) throws Exception {
         goTo(i);
@@ -68,7 +68,7 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     /**
-     * @return �±�Ϊi��Ԫ�ص�ֵ
+     * @return 下标为i的元素的值
      */
     public E get(int i) throws Exception {
         goTo(i);
@@ -77,7 +77,7 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     /**
-     * @return ����ĳ���
+     * @return 链表的长度
      */
     public int size() {
         return size;
@@ -85,9 +85,9 @@ public class MyLinkList<E> implements MyList<E> {
 
     @Override
     /**
-     * ����obj��λ��
+     * 搜索obj的位置
      *
-     * @return obj��Ӧ���±�
+     * @return obj对应的下标
      */
     public int search(E obj) {
         int count = 0;
@@ -108,9 +108,9 @@ public class MyLinkList<E> implements MyList<E> {
     }
 
     /**
-     * ������ת��������
+     * 将链表转换成数组
      *
-     * @return ����
+     * @return 数组
      */
     public E[] toArrary() {
         Object[] ret = new Object[size];
@@ -123,7 +123,7 @@ public class MyLinkList<E> implements MyList<E> {
     }
 
     /**
-     * ��currentָ���Ӧ���±�
+     * 将current指向对应的下标
      *
      * @param i
      * @throws Exception
