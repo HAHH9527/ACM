@@ -12,7 +12,7 @@ public class Test {
         System.out.println("---");
         System.out.println(mll.size);
         System.out.println("---");
-        mll.add(0, "�����");
+        mll.add(0, "添加的String");
         System.out.println(mll.end.getValue());
         System.out.println("---");
         for (int i = 0; i < mll.size; i++) {
@@ -25,7 +25,7 @@ public class Test {
             System.out.println(mll.get(i));
         }
         System.out.println("---");
-        System.out.println(mll.search("�����"));
+        System.out.println(mll.search("添加的String"));
         System.out.println("---");
     }
 }
