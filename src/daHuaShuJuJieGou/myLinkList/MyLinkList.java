@@ -130,7 +130,7 @@ public class MyLinkList<E> implements MyList<E> {
      */
     private void goTo(int i) throws Exception {
         if (i >= size || i < 0) {
-            throw new Exception("��LinkList���Ҳ�����ӦObj");
+            throw new Exception("goTo参数错误");
         }
         current = head.getNext();
         for (int count = 1; count <= i; count++) {

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4ca345b-28cc-49fa-a458-5dbbf1ccbb2e" name="Default" comment="hduOj 1089-1096 A+B">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+    <list default="true" id="b4ca345b-28cc-49fa-a458-5dbbf1ccbb2e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/Test.java" afterPath="$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/MyLinkList.java" afterPath="$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/MyLinkList.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
@@ -27,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyLinkList.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyLinkList.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/MyLinkList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="2816">
+              <caret line="132" column="41" lean-forward="false" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -91,7 +89,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/hduOJ/Num1088.java" />
         <option value="$PROJECT_DIR$/src/hduOJ/Num1425_.java" />
-        <option value="$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/MyLinkList.java" />
         <option value="$PROJECT_DIR$/src/hduOJ/date20170603/Num1089.java" />
         <option value="$PROJECT_DIR$/src/hduOJ/Num1089.java" />
         <option value="$PROJECT_DIR$/src/hduOJ/date20170603/Num1090.java" />
@@ -105,6 +102,7 @@
         <option value="$PROJECT_DIR$/src/hduOJ/Num1096.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/Test.java" />
+        <option value="$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/MyLinkList.java" />
       </list>
     </option>
   </component>
@@ -499,7 +497,7 @@
       <workItem from="1506704835586" duration="557000" />
       <workItem from="1506751288620" duration="651000" />
       <workItem from="1507509205669" duration="441000" />
-      <workItem from="1507512352278" duration="791000" />
+      <workItem from="1507512352278" duration="865000" />
     </task>
     <task id="LOCAL-00001" summary="2017年9月16日">
       <created>1505498091535</created>
@@ -529,11 +527,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506519747603</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="处理乱码">
+      <created>1507518269200</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1507518269200</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17217000" />
+    <option name="totallyTimeSpent" value="17291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -589,7 +594,8 @@
     <MESSAGE value="HDOJ1088更改编码" />
     <MESSAGE value="将myLinkList的乱码恢复正常" />
     <MESSAGE value="hduOj 1089-1096 A+B" />
-    <option name="LAST_COMMIT_MESSAGE" value="hduOj 1089-1096 A+B" />
+    <MESSAGE value="处理乱码" />
+    <option name="LAST_COMMIT_MESSAGE" value="处理乱码" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -922,14 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/MyLinkList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/A.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -960,6 +958,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/daHuaShuJuJieGou/myLinkList/MyLinkList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2816">
+          <caret line="132" column="41" lean-forward="false" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
           <folding />
         </state>
       </provider>
