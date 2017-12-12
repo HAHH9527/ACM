@@ -1,9 +1,10 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNext())
+        String str = "abc abc aacc ccdd";
+        String[] arr = str.split(" ");
+        for (String s : arr) {
+            System.out.println(s);
+        }
     }
 }
