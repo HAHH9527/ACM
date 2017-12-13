@@ -8,7 +8,7 @@ public class Num1006 {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
             String str = sc.nextLine();
-            if (str.equals("#")) {
+            if (str.equals("#")) {//String用equlse比较，不要用"=="
                 break;
             }
             HashSet<String> set = new HashSet<>();
