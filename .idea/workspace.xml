@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4ca345b-28cc-49fa-a458-5dbbf1ccbb2e" name="Default" comment="hduOJ 1010 1859 2091 2160">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/smartfox_info.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hduOJ/Num1597.java" afterDir="false" />
+    <list default="true" id="b4ca345b-28cc-49fa-a458-5dbbf1ccbb2e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hduOJ/_Num1597.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -298,14 +293,15 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/MyEclipseProject/Date20180306Chapter3" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="2148&#9;PSI&#9;JAVA://hduOJ.Num2148&#10;2160&#9;FILE&#9;file://E:/我热爱学习/JAVA/项目/Eclipse/ACM/src/hduOJ/date20161210&#10;2008&#9;PSI&#9;JAVA://hduOJ.Num2008" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537251847211" />
+    <property name="last_opened_file_path" value="E:/MyEclipseProject/Date20180306Chapter3" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -324,9 +320,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._Num1597">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CF.r468D2.B" />
@@ -338,6 +337,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="EightQueens" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="eightQueens.EightQueens" />
@@ -349,11 +351,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ACM" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Num1010" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hduOJ.Num1010" />
@@ -365,6 +373,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Num1597" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hduOJ.Num1597" />
@@ -376,61 +387,42 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Num1597" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.B" />
       <item itemvalue="Application.EightQueens" />
       <item itemvalue="Application.Num1010" />
-      <item itemvalue="Application._Num1597" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application._Num1597" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Num1010" />
         <item itemvalue="Application.EightQueens" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.B" />
       </list>
     </recent_temporary>
@@ -517,7 +509,7 @@
       <workItem from="1522598017877" duration="783000" />
       <workItem from="1528244902892" duration="925000" />
       <workItem from="1529236328896" duration="1179000" />
-      <workItem from="1529237533187" duration="10763000" />
+      <workItem from="1529237533187" duration="10809000" />
     </task>
     <task id="LOCAL-00001" summary="2017年9月16日">
       <created>1505498091535</created>
@@ -666,7 +658,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520737295033</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="hduOJ 1597">
+      <created>1529249130091</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1529249130091</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -678,7 +677,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160448000" />
+    <option name="totallyTimeSpent" value="160494000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -784,7 +783,8 @@
     <MESSAGE value="2017年12月9日第三周集训&#10;http://acm.hdu.edu.cn/diy/contest_show.php?cid=32969&#10;密码:kyacm&#10;9、10题" />
     <MESSAGE value="CFr468D2" />
     <MESSAGE value="hduOJ 1010 1859 2091 2160" />
-    <option name="LAST_COMMIT_MESSAGE" value="hduOJ 1010 1859 2091 2160" />
+    <MESSAGE value="hduOJ 1597" />
+    <option name="LAST_COMMIT_MESSAGE" value="hduOJ 1597" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

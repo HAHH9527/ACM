@@ -1,23 +1,19 @@
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNextInt()) {
-            int n = sc.nextInt();
-            int[] arr = new int[n];
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = sc.nextInt();
-            }
-            for (int i = 0; i < arr.length - 1; i++) {
-                for (int j = 0; j < arr.length - i - 1; j++) {
-                    if (arr[j] > arr[j + 1]) {
-                        int temp = arr[j];
-                        arr[j] = arr[j + 1];
-                    }
+        Scanner a = new Scanner(System.in);
+        String str;
+        int na = 0;
+        str = a.next();
+
+        for (int i = 0; i < str.length(); i++)
+            if (i != i + 1 && str.charAt(i) == 'A' || str.charAt(i) == 'a') {
+                if (str.charAt(i + 1) == 'c' || str.charAt(i + 1) == 'C') {
+                    i++;
+                    na++;
                 }
             }
-        }
+        System.out.println(na);
     }
 }
