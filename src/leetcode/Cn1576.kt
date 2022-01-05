@@ -11,7 +11,7 @@ object Cn1576 {
         fun modifyString(s: String): String {
 
             if (s.length <= 1) {
-                return if (s!="?") s else "a"
+                return if (s != "?") s else "a"
             }
 
             val charArray = s.toCharArray()
