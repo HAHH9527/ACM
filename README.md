@@ -4,6 +4,8 @@
 - [lanQiao](lanQiao): 蓝桥杯的一些题目
 - [leetCode](leetCode): 力扣: [中国站](https://leetcode-cn.com/) [国际站](https://leetcode.com/)
 
+This project share my solution of algorithm problem.
+
 # Thanks for JetBrains
 ### Licenses for Open Source Development - Community Support
 > JetBrains supports non-commercial open source projects by providing core project contributors with a set of best-in-class developer tools free of charge.
